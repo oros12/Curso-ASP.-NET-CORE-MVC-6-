@@ -1,0 +1,15 @@
+﻿@model TipoCuenta
+
+    <h3 class="display-4 text-center ">Editar cuenta: @Model.Nombre</h3>
+    <div asp-validation-summary:"ModelOnly" class="text-danger"></div>
+    <form asp-action="Editar" class="text-center">
+        <div class="my-3">
+        <input type="hidden" asp-for="Id"/> 
+        <label asp-for="Nombre" class="form-label"></label>
+        <input type="text" asp-for="Nombre" class="form-controller">
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <a class="btn btn-danger" asp-action="Index">Cancelar</a>
+    </form>

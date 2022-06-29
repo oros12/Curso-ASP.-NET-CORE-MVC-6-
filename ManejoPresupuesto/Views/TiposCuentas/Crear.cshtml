@@ -1,0 +1,15 @@
+﻿@model TipoCuenta
+@{
+    <h1 class ="display-4">Bienvenido, cree su cuenta</h1>
+    <form  asp-controller=TiposCuentas asp-action =Crear>
+     <label asp-for="Nombre" class="form-label"></label>
+     <input asp-for ="Nombre" class="form-control" >
+     <span asp-validation-for="Nombre" class="text-danger"></span>
+     <button type="submit" class = "mt-3 btn btn-outline-primary">Enviar</button>
+     <a class="btn btn-outline-danger mt-3" asp-action="Index">Cancelar</a>
+    </form>
+}
+@section scripts
+{
+    <partial name =_ValidationScriptsPartial></partial>
+}
